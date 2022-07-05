@@ -12,19 +12,19 @@
         - vim-nox 
         - dconf-cli
 
-- name: copy wallpaper file
-  copy:
-    src: files/brian_park_heron.jpg
-    dest: /usr/share/backgrounds/brian_park_heron.jpg
-    owner: root 
-    group: root 
+  - name: copy wallpaper file
+    copy:
+      src: files/brian_park_heron.jpg
+      dest: /usr/share/backgrounds/brian_park_heron.jpg
+      owner: root 
+      group: root 
 
-- name: set wallpaper
-  dconf:
-    key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file:///usr/share/backgrounds/brian_park_heron.jpg'"
+  - name: set wallpaper
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/brian_park_heron.jpg'"
 
-- name: set wallpaper position
-  dconf:
-    key: "/org/gnome/desktop/background/picture-options"
-    value: "'zoom'"
+  - name: set wallpaper position
+    dconf:
+      key: "/org/gnome/desktop/background/picture-options"
+      value: "'zoom'"
